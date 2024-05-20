@@ -1,0 +1,9 @@
+.aboutContainer {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    
+    h2, p {
+        margin: 20px;
+    }
+}

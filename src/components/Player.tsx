@@ -1,21 +1,44 @@
 import "./player.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 interface PlayerProps {
   id: number;
 }
 
 export const Player: React.FC<PlayerProps> = ({ id }) => {
-  const [name, setName] = useState("Player " + id);
-  const [score, setScore] = useState(0);
-  const [history, setHistory] = useState<number[]>([]);
+  const [name, setName] = useState(() => {
+    const savedName = localStorage.getItem(`player-${id}-name`);
+    return savedName ? savedName : "Player " + id;
+  });
+  
+  const [score, setScore] = useState(() => {
+    const savedScore = localStorage.getItem(`player-${id}-score`);
+    return savedScore ? parseInt(savedScore) : 0;
+  });
+  
+  const [history, setHistory] = useState<number[]>(() => {
+    const savedHistory = localStorage.getItem(`player-${id}-history`);
+    return savedHistory ? JSON.parse(savedHistory) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem(`player-${id}-name`, name);
+  }, [name]);
+
+  useEffect(() => {
+    localStorage.setItem(`player-${id}-score`, score.toString());
+  }, [score]);
+
+  useEffect(() => {
+    localStorage.setItem(`player-${id}-history`, JSON.stringify(history));
+  }, [history]);
 
   const increaseScore = (value: number) => {
     setScore(score + value);
     setHistory([...history, value]);
   };
 
-  const handleNameChange = (e: any) => {
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
   };
 

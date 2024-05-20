@@ -7,9 +7,10 @@
 
 .playerContainer {
     display: flex;
+    justify-content: center;
 }
 
-.removeButton {
+.smallButton {
     display: flex;
     color: #e77350;
     border: none;
@@ -18,15 +19,10 @@
     cursor: pointer;
 }
 
-.removeButton:hover {
-    background-color: #c56142;
-}
-
-.addButton {
+.bigButton {
     min-height: 60px;
     height: 5vh;
     width: 90%;
-    background-color: #4CAF50;
     border: none;
     color: white;
     font-size: calc(1rem + 2vmin);
@@ -35,6 +31,18 @@
     margin-top: 20px;
 }
 
-.addButton:hover {
+.green {
+    background-color: #4CAF50;
+}
+
+.green:hover {
     background-color: #45a049;
+}
+
+.red {
+    background-color: #e77350;
+}
+
+.red:hover {
+    background-color: #c56142;
 }
