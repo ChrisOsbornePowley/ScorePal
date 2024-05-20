@@ -1,44 +1,44 @@
 .playerContainer {
     display: flex;
-    flex-direction: row;
     color: white;
     align-items: center;
-    min-height: 60px;
-    height: 10vh;
-    margin: 10px;
+    height: 70px;
+    padding: 5px 0px;
+    border-bottom: 2px solid white;
 }
 
 .leftContainer, .rightContainer {
     display: flex;
     flex-direction: column;
     text-align: left;
-    width: 50%;
+    flex: 1;
     height: 90%;
+    min-width: 110px;
+    width: 50%;
+    margin: 5px;
 }
 
 .playerName {
     border: none;
     border-radius: 5px;
-    font-size: calc(1rem + 1vmin);
+    font-size: 1rem;
     overflow: hidden;
-    width: 90%;
+    width: 100%;
     margin-bottom: auto;
 }
 
 .buttonContainer {
     display: flex;
     width: 90%;
-    justify-content: flex-start;
-    margin-top: auto;
     
     button {
         background-color: #4CAF50;
         border: none;
         color: white;
-        font-size: calc(1rem + 2vmin);
+        font-size: 1rem;
         cursor: pointer;
         border-radius: 5px;
-        margin: 5px;
+        margin-right: 5px;
     }
 
     button:hover {
@@ -52,10 +52,11 @@
     justify-content: center;
     background-color: #45a049;
     border-radius: 5px;
-    font-size: calc(1rem + 3vmin);
+    font-size: 1.5rem;
     width: 100%;
-    height: 50%;
     margin-bottom: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .resetContainer {
@@ -67,10 +68,10 @@
         background-color: #e77350;
         border: none;
         color: white;
-        font-size: calc(1rem + 1vmin);
+        font-size: 1rem;
         cursor: pointer;
         border-radius: 5px;
-        margin: 5px;
+        margin-left: 5px;
     }
 
     button:hover {

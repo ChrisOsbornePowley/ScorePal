@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.css";
 import { WelcomePage } from "./pages/WelcomePage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";

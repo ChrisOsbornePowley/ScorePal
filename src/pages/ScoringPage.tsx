@@ -46,7 +46,7 @@ export const ScoringPage = () => {
   return (
     <div className="scorePageContainer">
       {playerIds.map((id) => (
-        <div className="playerContainer" key={id}>
+        <div className="scoreCardContainer" key={id}>
           <Player id={id} />
           <button className="smallButton" onClick={() => removePlayer(id)}>
             <i className="fa-solid fa-square-xmark"></i>

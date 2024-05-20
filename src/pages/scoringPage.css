@@ -5,9 +5,10 @@
     overflow: auto;
 }
 
-.playerContainer {
+.scoreCardContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .smallButton {

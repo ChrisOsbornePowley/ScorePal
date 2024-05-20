@@ -23,15 +23,15 @@ export const Player: React.FC<PlayerProps> = ({ id }) => {
 
   useEffect(() => {
     localStorage.setItem(`player-${id}-name`, name);
-  }, [name]);
+  }, [id, name]);
 
   useEffect(() => {
     localStorage.setItem(`player-${id}-score`, score.toString());
-  }, [score]);
+  }, [id, score]);
 
   useEffect(() => {
     localStorage.setItem(`player-${id}-history`, JSON.stringify(history));
-  }, [history]);
+  }, [id, history]);
 
   const increaseScore = (value: number) => {
     setScore(score + value);
