@@ -3,7 +3,6 @@ import { Player } from "../components/Player";
 import React, { useState, useRef, useEffect } from "react";
 
 export const ScoringPage = () => {
-
   const [playerIds, setPlayerIds] = useState<number[]>(() => {
     const savedPlayerIds = localStorage.getItem("playerIds");
     return savedPlayerIds ? JSON.parse(savedPlayerIds) : [];
@@ -53,7 +52,11 @@ export const ScoringPage = () => {
           </button>
         </div>
       ))}
-      <button ref={addButtonRef} className="bigButton green" onClick={addNewPlayer}>
+      <button
+        ref={addButtonRef}
+        className="bigButton green"
+        onClick={addNewPlayer}
+      >
         Add New Player
       </button>
       <button className="bigButton red" onClick={resetAll}>
