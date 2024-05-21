@@ -10,12 +10,12 @@ export const Player: React.FC<PlayerProps> = ({ id }) => {
     const savedName = localStorage.getItem(`player-${id}-name`);
     return savedName ? savedName : "Player " + id;
   });
-  
+
   const [score, setScore] = useState(() => {
     const savedScore = localStorage.getItem(`player-${id}-score`);
     return savedScore ? parseInt(savedScore) : 0;
   });
-  
+
   const [history, setHistory] = useState<number[]>(() => {
     const savedHistory = localStorage.getItem(`player-${id}-history`);
     return savedHistory ? JSON.parse(savedHistory) : [];
@@ -57,25 +57,25 @@ export const Player: React.FC<PlayerProps> = ({ id }) => {
 
   return (
     <div className="playerContainer">
-      <div className="leftContainer">
+      <div className="topBar">
         <input
           className="playerName"
           type="text"
           value={name}
           onChange={handleNameChange}
         />
-        <div className="buttonContainer">
-          <button onClick={() => increaseScore(1)}>+1</button>
-          <button onClick={() => increaseScore(3)}>+3</button>
-          <button onClick={() => increaseScore(5)}>+5</button>
-        </div>
       </div>
-      <div className="rightContainer">
-        <div className="scoreContainer">{score}</div>
-        <div className="resetContainer">
-          <button onClick={undoScore}>Undo</button>
-          <button onClick={resetScore}>Reset</button>
-        </div>
+      <div className="bottomBar">
+        <button onClick={() => increaseScore(1)}>+1</button>
+        <button onClick={() => increaseScore(3)}>+3</button>
+        <button onClick={() => increaseScore(5)}>+5</button>
+        <div className="score">{score}</div>
+        <button className="red" onClick={undoScore}>
+          <i className="fa-solid fa-rotate-left"></i>
+        </button>
+        <button className="red" onClick={resetScore}>
+          <i className="fa-solid fa-trash-can"></i>
+        </button>
       </div>
     </div>
   );

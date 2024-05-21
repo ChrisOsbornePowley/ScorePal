@@ -4,7 +4,7 @@ import "./welcomePage.css";
 export const WelcomePage = () => {
   return (
     <div className="container">
-      <h2>Welcome to Score Pal</h2>
+      <h2>Welcome to SimpleScorer</h2>
       <img src="/boardgamelogo.png" className="logo" alt="logo" />
       <p>A handy score tracker for board games and more!</p>
       <Link to="/scoring">

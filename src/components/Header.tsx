@@ -5,7 +5,7 @@ export const Header = () => {
   return (
     <Link to="/">
       <div className="header">
-        <h1>ScorePal</h1>
+        <h1>SimpleScorer</h1>
       </div>
     </Link>
   );

@@ -1,6 +1,6 @@
 {
-  "short_name": "Score-Pal",
-  "name": "Score-Pal Board Game Score Helper",
+  "short_name": "SimpleScorer",
+  "name": "SimpleScorer - Board Game Score Helper",
   "icons": [
     {
       "src": "boardgamelogo.png",
