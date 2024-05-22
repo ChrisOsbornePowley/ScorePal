@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const useScorePageManager = () => {
+export const usePlayerManager = () => {
   const [playerIds, setPlayerIds] = useState<number[]>(() => {
     const savedPlayerIds = localStorage.getItem("playerIds");
     return savedPlayerIds ? JSON.parse(savedPlayerIds) : [];
@@ -18,15 +18,11 @@ export const useScorePageManager = () => {
     setPlayerIds(updatedPlayerIds);
     localStorage.setItem("playerIds", JSON.stringify(updatedPlayerIds));
     localStorage.removeItem(`player-${id}-name`);
-    localStorage.removeItem(`player-${id}-score`);
-    localStorage.removeItem(`player-${id}-history`);
   };
 
   const resetAll = () => {
     playerIds.forEach((id) => {
       localStorage.removeItem(`player-${id}-name`);
-      localStorage.removeItem(`player-${id}-score`);
-      localStorage.removeItem(`player-${id}-history`);
     });
     localStorage.removeItem("playerIds");
     setPlayerIds([]);

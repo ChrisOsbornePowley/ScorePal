@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import { Button } from "../components/Button";
-import { useScorePageManager } from "../hooks/useScorePageManager";
+import { usePlayerManager } from "../hooks/usePlayerManager";
 import { NewPlayer } from "../components/NewPlayer";
 import "./setupPlayers.css";
 
 export const SetupPlayers = () => {
   const { playerIds, addNewPlayer, removePlayer, resetAll } =
-    useScorePageManager();
+    usePlayerManager();
 
   const navigate = useNavigate();
 
