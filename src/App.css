@@ -11,3 +11,7 @@ header {
   width: 100%;
   z-index: 1000;
 }
+
+h2 {
+  color: white;
+}

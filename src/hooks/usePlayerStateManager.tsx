@@ -1,11 +1,6 @@
 import { useState, useEffect } from "react";
 
 export const usePlayerStateManager = (id: number) => {
-  const [name, setName] = useState(() => {
-    const savedName = localStorage.getItem(`player-${id}-name`);
-    return savedName ? savedName : "Player " + id;
-  });
-
   const [score, setScore] = useState(() => {
     const savedScore = localStorage.getItem(`player-${id}-score`);
     return savedScore ? parseInt(savedScore) : 0;
@@ -17,10 +12,9 @@ export const usePlayerStateManager = (id: number) => {
   });
 
   useEffect(() => {
-    localStorage.setItem(`player-${id}-name`, name);
     localStorage.setItem(`player-${id}-score`, score.toString());
     localStorage.setItem(`player-${id}-history`, JSON.stringify(history));
-  }, [id, name, score, history]);
+  }, [id, score, history]);
 
   const [flash, setFlash] = useState(0);
   useEffect(() => {
@@ -30,10 +24,6 @@ export const usePlayerStateManager = (id: number) => {
   const increaseScore = (value: number) => {
     setScore(score + value);
     setHistory([...history, value]);
-  };
-
-  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setName(e.target.value);
   };
 
   const undoScore = () => {
@@ -50,8 +40,6 @@ export const usePlayerStateManager = (id: number) => {
   };
 
   return {
-    name,
-    handleNameChange,
     score,
     increaseScore,
     undoScore,

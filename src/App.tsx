@@ -2,7 +2,6 @@ import "./App.css";
 import { WelcomePage } from "./pages/WelcomePage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AboutPage } from "./pages/AboutPage";
-import { ScoringPage } from "./pages/ScoringPage";
 import { Header } from "./components/Header";
 import { SetupPlayers } from "./pages/SetupPlayers";
 import { SetupScoring } from "./pages/SetupScoring";
@@ -17,7 +16,6 @@ function App() {
         <Routes>
           <Route path="/" element={<WelcomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/scoring" element={<ScoringPage />} />
           <Route path="/setupplayers" element={<SetupPlayers />} />
           <Route path="/setupscoring" element={<SetupScoring />} />
           <Route path="/playgame" element={<PlayGame />} />
