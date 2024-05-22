@@ -23,15 +23,15 @@ export const Player: React.FC<PlayerProps> = ({ id }) => {
 
   useEffect(() => {
     localStorage.setItem(`player-${id}-name`, name);
-  }, [id, name]);
-
-  useEffect(() => {
     localStorage.setItem(`player-${id}-score`, score.toString());
-  }, [id, score]);
-
-  useEffect(() => {
     localStorage.setItem(`player-${id}-history`, JSON.stringify(history));
-  }, [id, history]);
+  }, [id, name, score, history]);
+
+  const [flash, setFlash] = useState(0);
+  useEffect(() => {
+    setFlash(prevKey => prevKey + 1);
+  }, [score]);
+
 
   const increaseScore = (value: number) => {
     setScore(score + value);
@@ -69,7 +69,7 @@ export const Player: React.FC<PlayerProps> = ({ id }) => {
         <button onClick={() => increaseScore(1)}>+1</button>
         <button onClick={() => increaseScore(3)}>+3</button>
         <button onClick={() => increaseScore(5)}>+5</button>
-        <div className="score">{score}</div>
+        <div key={flash} className={"score flash"}>{score}</div>
         <button className="red" onClick={undoScore}>
           <i className="fa-solid fa-rotate-left"></i>
         </button>

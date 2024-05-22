@@ -15,7 +15,7 @@
     overflow: hidden;
     width: 80%;
     max-width: 500px;
-    font-size: large;
+    font-size: larger;
 }
 
 
@@ -63,3 +63,18 @@
         padding: 1rem;
     }
 }
+
+/* Flash animation */
+@keyframes flash {
+    0% {
+      background-color: yellow;
+    }
+    100% {
+      background-color: transparent;
+    }
+  }
+  
+  .flash {
+    animation: flash 0.5s ease-out;
+  }
+  
