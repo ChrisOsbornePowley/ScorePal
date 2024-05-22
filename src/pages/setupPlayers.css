@@ -4,13 +4,13 @@
 
 .playerContainer {
     display: flex;
-    flex-wrap:wrap ;
+    flex-wrap: wrap ;
     align-items: center;
     justify-content: center;
     margin: 20px;
 
     && input {
         font-size: larger;
-        width: 70vw;
+        width: 50vw;
     }
 }
