@@ -4,6 +4,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AboutPage } from "./pages/AboutPage";
 import { ScoringPage } from "./pages/ScoringPage";
 import { Header } from "./components/Header";
+import { SetupPlayers } from "./pages/SetupPlayers";
+import { SetupScoring } from "./pages/SetupScoring";
+import { PlayGame } from "./pages/PlayGame";
+import { GameResults } from "./pages/GameResults";
 
 function App() {
   return (
@@ -14,6 +18,10 @@ function App() {
           <Route path="/" element={<WelcomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/scoring" element={<ScoringPage />} />
+          <Route path="/setupplayers" element={<SetupPlayers />} />
+          <Route path="/setupscoring" element={<SetupScoring />} />
+          <Route path="/playgame" element={<PlayGame />} />
+          <Route path="/gameresults" element={<GameResults />} />
         </Routes>
       </BrowserRouter>
     </div>
