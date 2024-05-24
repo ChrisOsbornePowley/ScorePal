@@ -1,17 +1,17 @@
 .header {
-    display: flex;
-    background-color: #4CAF50;
-    color: white;
-    height: 10vh;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	background-color: #4CAF50;
+	color: white;
+	height: 10vh;
+	align-items: center;
+	justify-content: center;
 }
 
 .header:hover {
-    background-color: #45a049;
+	background-color: #45a049;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }

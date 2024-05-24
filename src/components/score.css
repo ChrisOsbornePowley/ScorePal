@@ -1,0 +1,14 @@
+.score {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+	min-height: 70px;
+	min-width: 100px;
+	background-color: #4CAF50;
+	font-size: 60px;
+	font-weight: bold;
+	color: white;
+	margin: 10px;
+	padding: 5px;
+}

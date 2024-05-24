@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export const usePlayerStateManager = (id: number) => {
+export const useScoreManager = (id: number) => {
   const [score, setScore] = useState(() => {
     const savedScore = localStorage.getItem(`player-${id}-score`);
     return savedScore ? parseInt(savedScore) : 0;
@@ -15,11 +15,6 @@ export const usePlayerStateManager = (id: number) => {
     localStorage.setItem(`player-${id}-score`, score.toString());
     localStorage.setItem(`player-${id}-history`, JSON.stringify(history));
   }, [id, score, history]);
-
-  const [flash, setFlash] = useState(0);
-  useEffect(() => {
-    setFlash((prevKey) => prevKey + 1);
-  }, [score]);
 
   const increaseScore = (value: number) => {
     setScore(score + value);
@@ -44,6 +39,5 @@ export const usePlayerStateManager = (id: number) => {
     increaseScore,
     undoScore,
     resetScore,
-    flash,
   };
 };

@@ -1,4 +1,31 @@
 .playerCardContainer {
-    border: 2px black solid;
-    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.075);
+
+    .playerTop {
+        display: flex;
+        min-width: 200px;
+        width: 70%;
+        align-items: center;
+        text-align: left;
+        justify-content: space-between;
+    }
+
+    h2 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-right: 10px;
+    }
+
+    .playerBottom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }

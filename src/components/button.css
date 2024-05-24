@@ -1,41 +1,50 @@
  .button {
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    overflow: hidden;
+	border: none;
+	color: white;
+	cursor: pointer;
+	border-radius: 5px;
+	overflow: hidden;
 
-    &&.small {
-        font-size: 1rem;
-        margin: 5px;
-        padding: 5px;
-    }
+	&&.small {
+		font-size: 1rem;
+		margin: 5px;
+		padding: 5px;
+	}
 
-    &&.medium {
-        min-width: 40vw;
-        font-size: calc(1rem + 1vmin);
-        margin: 10px;
-        padding: 10px;
-    }
-    
-    &&.big {
-        min-width: 80vw;
-        font-size: calc(1rem + 2vmin);
-        margin: 10px;
-        padding: 10px;
-    }   
-    &&.green {
-        background-color: #4CAF50;
-    }
-    &&.green:hover {
-        background-color: #45a049;
-    }
-    &&.red {
-        background-color: #e77350;
-    }
-    &&.red:hover {
-        background-color: #c56142;
-    }
+	&&.medium {
+		min-width: 40vw;
+		font-size: calc(1rem + 1vmin);
+		margin: 10px;
+		padding: 10px;
+	}
+	
+	&&.big {
+		min-width: 80vw;
+		font-size: calc(1rem + 2vmin);
+		margin: 10px;
+		padding: 10px;
+	}   
+
+	&&.number {
+		font-size: 2rem;
+		margin: 10px;
+		padding: 5px;
+		min-height: 50px;
+		min-width: 50px;
+	}
+
+	&&.green {
+		background-color: #4CAF50;
+	}
+	&&.green:hover {
+		background-color: #45a049;
+	}
+	&&.red {
+		background-color: #e77350;
+	}
+	&&.red:hover {
+		background-color: #c56142;
+	}
  }
  
  
