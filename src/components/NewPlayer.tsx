@@ -6,7 +6,7 @@ interface PlayerProps {
 
 export const NewPlayer: React.FC<PlayerProps> = ({ id }) => {
   const [name, setName] = useState(() => {
-    const savedName = localStorage.getItem(`player-${id}-name`);
+    const savedName = sessionStorage.getItem(`player-${id}-name`);
     return savedName ? savedName : "";
   });
 
@@ -15,7 +15,7 @@ export const NewPlayer: React.FC<PlayerProps> = ({ id }) => {
   };
 
   useEffect(() => {
-    localStorage.setItem(`player-${id}-name`, name);
+    sessionStorage.setItem(`player-${id}-name`, name);
   });
 
   return (

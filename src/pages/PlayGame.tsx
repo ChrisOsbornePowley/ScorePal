@@ -5,7 +5,7 @@ import { PlayerCard } from "../components/PlayerCard";
 export const PlayGame = () => {
   const { playerIds } = usePlayerManager();
 
-  const scoreButtonsStr = localStorage.getItem("chosenScoreButtons");
+  const scoreButtonsStr = sessionStorage.getItem("chosenScoreButtons");
   let scoreButtons = scoreButtonsStr ? JSON.parse(scoreButtonsStr) : [1, 2];
   scoreButtons = scoreButtons.sort((a: number, b: number) => a - b);
 

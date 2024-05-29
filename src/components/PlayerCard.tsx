@@ -10,7 +10,7 @@ interface PlayerCardProps {
 }
 
 export const PlayerCard: React.FC<PlayerCardProps> = ({ id, scoreButtons }) => {
-  const playerName = localStorage.getItem(`player-${id}-name`) || "Nameless";
+  const playerName = sessionStorage.getItem(`player-${id}-name`) || "Nameless";
 
   const { score, increaseScore, undoScore, resetScore } = useScoreManager(id);
 

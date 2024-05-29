@@ -2,18 +2,18 @@ import { useEffect, useState } from "react";
 
 export const useScoreManager = (id: number) => {
   const [score, setScore] = useState(() => {
-    const savedScore = localStorage.getItem(`player-${id}-score`);
+    const savedScore = sessionStorage.getItem(`player-${id}-score`);
     return savedScore ? parseInt(savedScore) : 0;
   });
 
   const [history, setHistory] = useState<number[]>(() => {
-    const savedHistory = localStorage.getItem(`player-${id}-history`);
+    const savedHistory = sessionStorage.getItem(`player-${id}-history`);
     return savedHistory ? JSON.parse(savedHistory) : [];
   });
 
   useEffect(() => {
-    localStorage.setItem(`player-${id}-score`, score.toString());
-    localStorage.setItem(`player-${id}-history`, JSON.stringify(history));
+    sessionStorage.setItem(`player-${id}-score`, score.toString());
+    sessionStorage.setItem(`player-${id}-history`, JSON.stringify(history));
   }, [id, score, history]);
 
   const increaseScore = (value: number) => {
