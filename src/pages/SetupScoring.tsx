@@ -44,7 +44,7 @@ export const SetupScoring = () => {
         size="big"
         colour="green"
         text="Start Game"
-        onClick={() => navigate("/playgame")}
+        onClick={() => navigate("/play")}
       />
     </div>
   );

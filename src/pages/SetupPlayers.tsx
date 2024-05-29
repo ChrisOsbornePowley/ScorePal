@@ -41,7 +41,7 @@ export const SetupPlayers = () => {
         size="big"
         colour="green"
         text="Continue"
-        onClick={() => navigate("/setupscoring")}
+        onClick={() => navigate("/scoring")}
       />
     </div>
   );

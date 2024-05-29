@@ -16,10 +16,10 @@ function App() {
         <Routes>
           <Route path="/" element={<WelcomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/setupplayers" element={<SetupPlayers />} />
-          <Route path="/setupscoring" element={<SetupScoring />} />
-          <Route path="/playgame" element={<PlayGame />} />
-          <Route path="/gameresults" element={<GameResults />} />
+          <Route path="/players" element={<SetupPlayers />} />
+          <Route path="/scoring" element={<SetupScoring />} />
+          <Route path="/play" element={<PlayGame />} />
+          <Route path="/results" element={<GameResults />} />
         </Routes>
       </BrowserRouter>
     </div>

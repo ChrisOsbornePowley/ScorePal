@@ -13,19 +13,19 @@ export const WelcomePage = () => {
         size="medium"
         colour="green"
         text="Choose Players"
-        onClick={() => navigate("/setupplayers")}
+        onClick={() => navigate("/players")}
       />
       <Button
         size="medium"
         colour="green"
         text="Choose Score Buttons"
-        onClick={() => navigate("/setupscoring")}
+        onClick={() => navigate("/scoring")}
       />
       <Button
         size="big"
         colour="green"
         text="Play Game"
-        onClick={() => navigate("/playgame")}
+        onClick={() => navigate("/play")}
       />
       <Button
         size="medium"

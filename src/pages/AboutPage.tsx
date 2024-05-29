@@ -5,13 +5,13 @@ export const AboutPage = () => {
     <div className="aboutContainer">
       <h2>About SimpleScorer</h2>
       <p>
-        SimpleScorer is a simple, straight forward web app to track scores in
-        any scenario. I built it to help my family keep track of scores in board
-        games more easily when we don't have a pen or paper handy.
+        SimpleScorer is a simple, straight forward web app to track scores. I
+        built it to keep track of scores in board games with my family when we
+        don't have a pen or paper handy.
       </p>
       <p>
-        It is very feature-light and intends to stay this way, although I may
-        add some quality of life changes or improvements.
+        It uses session storage to track players and their scores. It's very
+        feature-light and intends to stay this way.
       </p>
       <p>I hope you find it as helpful as I do!</p>
     </div>
