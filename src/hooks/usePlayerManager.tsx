@@ -22,6 +22,13 @@ export const usePlayerManager = () => {
     sessionStorage.removeItem(`player-${id}-history`);
   };
 
+  const resetAllScores = () => {
+    playerIds.forEach((id) => {
+      sessionStorage.removeItem(`player-${id}-score`);
+      sessionStorage.removeItem(`player-${id}-history`);
+    });
+  };
+
   const resetAll = () => {
     playerIds.forEach((id) => {
       sessionStorage.removeItem(`player-${id}-name`);
@@ -32,5 +39,5 @@ export const usePlayerManager = () => {
     setPlayerIds([]);
   };
 
-  return { playerIds, addNewPlayer, removePlayer, resetAll };
+  return { playerIds, addNewPlayer, removePlayer, resetAllScores, resetAll };
 };
